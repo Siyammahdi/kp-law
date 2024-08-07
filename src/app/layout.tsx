@@ -13,12 +13,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  onNext,
-  step,
 }: Readonly<{
   children: React.ReactNode;
-  onNext: () => void;
-  step: number;
 }>) {
   return (
     <html className="bg-background" lang="en">
