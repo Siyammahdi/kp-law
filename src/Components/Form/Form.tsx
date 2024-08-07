@@ -5,6 +5,7 @@ import "./RadioButton.css";
 import axios from 'axios';
 import { error } from "console";
 import { LiaUserShieldSolid } from "react-icons/lia";
+import { wrap } from "module";
 
 
 interface FormValues {
@@ -55,7 +56,7 @@ const RadioButtonForm: React.FC = () => {
             <legend className="text-xl mb-6">
               Have you, a family member, or someone you represent ever been diagnosed with one of the following cancers? *
             </legend>
-            <div className="toggle flex-none">
+            <div className="toggle flex-none" style={{flexFlow: "wrap"}}>
               <Field type="radio" name="cancerType" value="Ovarian" id="Ovarian" />
               <label htmlFor="Ovarian">Ovarian</label>
 
@@ -80,30 +81,30 @@ const RadioButtonForm: React.FC = () => {
             <p className="mb-6">
               For how many years did you, or the person you represent, use Johnson & Johnson talcum powder or baby powder on a weekly basis?
             </p>
-            <div className="toggle">
+            <div className="toggle" style={{flexFlow: "wrap"}}>
               <Field type="radio" name="yearsOfUse" value="Never" id="Never" />
               <label htmlFor="Never">Never</label>
 
               <Field type="radio" name="yearsOfUse" value="Less than 5 years" id="LessThan5Years" />
               <label htmlFor="LessThan5Years">Less than 5 years</label>
 
-              <Field type="radio" name="yearsOfUse" value="5 years or more" id="5YearsOrMore" />
-              <label htmlFor="5YearsOrMore">5 years</label>
+              <Field type="radio" name="yearsOfUse" value="5 years" id="5years" />
+              <label htmlFor="5years">5 years</label>
 
-              <Field type="radio" name="yearsOfUse" value="5 years or more" id="5YearsOrMore" />
-              <label htmlFor="5YearsOrMore">6 years</label>
+              <Field type="radio" name="yearsOfUse" value="6 years" id="6years" />
+              <label htmlFor="6years">6 years</label>
 
-              <Field type="radio" name="yearsOfUse" value="5 years or more" id="5YearsOrMore" />
-              <label htmlFor="5YearsOrMore">7 years</label>
+              <Field type="radio" name="yearsOfUse" value="7 years" id="7years" />
+              <label htmlFor="7years">7 years</label>
               
-              <Field type="radio" name="yearsOfUse" value="5 years or more" id="5YearsOrMore" />
-              <label htmlFor="5YearsOrMore">8 years</label>
+              <Field type="radio" name="yearsOfUse" value="8 years" id="8years" />
+              <label htmlFor="8years">8 years</label>
 
-              <Field type="radio" name="yearsOfUse" value="5 years or more" id="5YearsOrMore" />
-              <label htmlFor="5YearsOrMore">9 years</label>
+              <Field type="radio" name="yearsOfUse" value="9 years" id="9years" />
+              <label htmlFor="9years">9 years</label>
 
-              <Field type="radio" name="yearsOfUse" value="5 years or more" id="5YearsOrMore" />
-              <label htmlFor="5YearsOrMore">10 years or more</label>
+              <Field type="radio" name="yearsOfUse" value="10 years or more" id="10YearsOrMore" />
+              <label htmlFor="10YearsOrMore">10 years or more</label>
             </div>
             <ErrorMessage name="yearsOfUse" component="div" className="text-sm text-red-500" />
           </fieldset>
