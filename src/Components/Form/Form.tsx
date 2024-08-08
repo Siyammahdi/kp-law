@@ -3,10 +3,7 @@ import { useFormikContext, Formik, Form as FormikForm, Field, ErrorMessage } fro
 import * as Yup from "yup";
 import "./RadioButton.css";
 import axios from 'axios';
-import { error } from "console";
 import { LiaUserShieldSolid } from "react-icons/lia";
-import { wrap } from "module";
-
 
 interface FormValues {
   cancerType: string;
